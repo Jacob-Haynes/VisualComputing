@@ -1,0 +1,34 @@
+function [best1, best2, best3, best4] = ransac_func(data, n, k, t, d)
+%     data – observed data points
+%     n – min num of points required
+%     k – max num of iterations
+%     t – threshold value for fitting
+%     d – number of inliers required
+% 
+iter = 0;
+best1 = 0;
+best2 = 0;
+best3 = 0;
+best4 = 0;
+best_error = inf;
+while iter < k 
+%     maybeinliers = n randomly selected values from data
+%     maybemodel = model parameters fitted to maybeinliers
+%     alsoinliers = empty set
+%     for every point in data not in maybeinliers {
+%         if point fits maybemodel with an error smaller than t
+%              add point to alsoinliers
+%     }
+%     if the number of elements in alsoinliers is > d {
+%         % this implies that we may have found a good model
+%         % now test how good it is
+%         bettermodel = model parameters fitted to all points in maybeinliers and alsoinliers
+%         thiserr = a measure of how well model fits these points
+%         if thiserr < besterr {
+%             bestfit = bettermodel
+%             besterr = thiserr
+%         }
+%     }
+     iter = iter + 1;
+% }
+% return bestfit
